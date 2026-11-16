@@ -6,7 +6,7 @@ resource appService 'Microsoft.Web/sites@2022-09-01' = {
   kind: 'app'
   location: location
   properties: {
-    serverFarmId: resourceId('Microsoft.Web/serverfarms', 'F1')
+    serverFarmId: resourceId('Microsoft.Web/serverfarms', 'Default1pg')
     siteConfig: {
       netFrameworkVersion: 'v8.0'
       appSettings: [
