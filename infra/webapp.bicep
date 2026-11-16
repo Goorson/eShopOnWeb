@@ -7,22 +7,19 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServicePlanName
   location: location
   sku: {
-    name: 'B1'
-    tier: 'Basic'
-  }
-  properties: {
-    reserved: true
+    name: 'F1'
+    tier: 'Free'
   }
 }
 
 resource appService 'Microsoft.Web/sites@2022-09-01' = {
   name: webAppName
-  kind: 'app,linux'
+  kind: 'app'
   location: location
   properties: {
     serverFarmId: appServicePlan.id
     siteConfig: {
-      linuxFxVersion: 'DOTNETCORE|8.0'
+      netFrameworkVersion: 'v8.0'
       appSettings: [
         {
           name: 'ASPNETCORE_ENVIRONMENT'
