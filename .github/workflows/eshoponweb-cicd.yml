@@ -12,7 +12,7 @@ env:
   RESOURCE-GROUP: rg-eshoponweb-france
   LOCATION: francecentral
   TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: 197d3cef-3724-4cae-93e1-46c5d341b75e
+  SUBSCRIPTION-ID: xxxxx
   WEBAPP-NAME: devops-webapp-france-1705315157
 
 jobs:
